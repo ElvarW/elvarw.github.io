@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
 
@@ -11,80 +10,66 @@
             margin: 0;
             padding: 0;
         }
-
-        body {
+		body {
             background: rgb(0,206,209);
         }
-
-        .container {
+		.container {
             border: 1px solid grey;
             margin: 2rem;
 		background:white
         }
-
-        [data-tab-info] {
+		[data-tab-info] {
             display: none;
         }
-
-        .active[data-tab-info] {
+		.active[data-tab-info] {
             display: block;
         }
-
-        .tab-content {
+		.tab-content {
             margin-top: 1rem;
 	    margin-bottom:1rem;
             padding-left: 1rem;
 	    padding-right: 1rem;
             font-size: 20px;
             font-family: Times new roman, serif;
-            
         }
-
-        .tabs {
+		.tabs {
             border-bottom: 1px solid grey;
             background-color: white;
             font-size: 25px;
             color: black;
             display: flex;
             margin: 0;
-	font-family:Times new Roman, serif;
+			font-family:Times new Roman, serif;
         }
-
-        .tabs span {
+		.tabs span {
             background: rgb(0,206,209);
             padding: 15px;
             border: 1px solid grey;
         }
-
-        .tabs span:hover {
+		.tabs span:hover {
             background: rgb(0,139,139);
             cursor: pointer;
             color: black;
         }
-	h1, h2, h3, h4, h5, h6{
-  		margin-top:20px;
-  		margin-bottom:10px;
-}
-	h1{
-		text-align:center;
-		font-family:Optima,serif;
-	}
+		h1, h2, h3, h4, h5, h6{
+  			margin-top:20px;
+  			margin-bottom:10px;
+		}
+		h1{
+			text-align:center;
+			font-family:Optima,serif;
+		}
     </style>
 </head>
 
 <body>
 	<h1>Elvar Wang Atlason</h1>
-    <!-- Body Container -->
     <div class="container">
-
-        <!-- Tabs Detail -->
-        <div class="tabs">
+		<div class="tabs">
             <span data-tab-value="#tab_1">About me</span>
             <span data-tab-value="#tab_2">Flexible polyhedra</span>
         </div>
-
-        <!-- Tab content -->
-        <div class="tab-content">
+		<div class="tab-content">
             <div class="tabs__tab active" id="tab_1" data-tab-info>
 <p>I am a PhD student at University College London studying differential geometry. My supervisor is <a href="https://www.homepages.ucl.ac.uk/~ucahoan/" style="color: blue">Aleksander Doan</a>.  <br>
 Before that, I studied mathematics at the University of Cambridge.<br>
@@ -120,12 +105,7 @@ I teach the problem solving classes at UCL, and prepare the team for the Interna
 
 </p>
 
-
-
-
-
-            </div>
-            <div class="tabs__tab" id="tab_2" data-tab-info>
+<div class="tabs__tab" id="tab_2" data-tab-info>
 
 
 
@@ -173,11 +153,11 @@ This polyhedrom relies on a method called twinning to construct new flexible com
     });
 </script>
 
+</div>
+</div>
+</div>
 
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
+<script type="text/javascript">
 
         // function to get each tab details
         const tabs = document.querySelectorAll('[data-tab-value]')
@@ -208,4 +188,3 @@ Email: Elvar (d o t) Atlason (d o t) 23 (a t) ucl (d o t) ac (d o t) uk</center>
 
 </foot>
 
-</html>

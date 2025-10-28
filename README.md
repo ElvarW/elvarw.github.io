@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
 
@@ -26,12 +27,12 @@
         }
 		.tab-content {
             margin-top: 1rem;
-	    margin-bottom:1rem;
+	    	margin-bottom:1rem;
             padding-left: 1rem;
-	    padding-right: 1rem;
+	    	padding-right: 1rem;
             font-size: 20px;
             font-family: Times new roman, serif;
-        }
+		}
 		.tabs {
             border-bottom: 1px solid grey;
             background-color: white;
@@ -104,7 +105,7 @@ In Michaelmas term of 2024, I taught Icelandic at the University of Cambridge fo
 I teach the problem solving classes at UCL, and prepare the team for the International Mathematics Competition for University students, <a href = "https://www.imc-math.org.uk/" style = "color:blue">IMC</a>.<br> I also take part in the training of the Icelandic team for the International Maths Olympiad, <a href = "https://www.imo-official.org/" style = "color:blue">IMO</a>, and have served as the deputy leader for Iceland.
 
 </p>
-
+</div>
 <div class="tabs__tab" id="tab_2" data-tab-info>
 
 
@@ -152,19 +153,14 @@ This polyhedrom relies on a method called twinning to construct new flexible com
         applet2.inject('ggb-foxtrot');
     });
 </script>
-
 </div>
 </div>
 </div>
-
-<script type="text/javascript">
-
-        // function to get each tab details
+    <script type="text/javascript">
         const tabs = document.querySelectorAll('[data-tab-value]')
         const tabInfos = document.querySelectorAll('[data-tab-info]')
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
+		tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
                 const target = document
                     .querySelector(tab.dataset.tabValue);
                 tabInfos.forEach(tabInfo => {
@@ -188,3 +184,4 @@ Email: Elvar (d o t) Atlason (d o t) 23 (a t) ucl (d o t) ac (d o t) uk</center>
 
 </foot>
 
+</html>

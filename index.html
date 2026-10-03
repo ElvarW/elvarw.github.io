@@ -144,13 +144,7 @@ The model is interactive, you can move it around using your mouse. If the demo b
   <div id="ggb-element"></div>
 </div>
 
-<script>
-    var dodecahedron = {"material_id":"pb4nqczx", "appName": "3d", "width": 1400, "height": 1400, "showToolBar": false, "showAlgebraInput": false, "showMenuBar": false, scale:0.4, enableRightClick:false};
-    var applet = new GGBApplet(dodecahedron, true);
-    window.addEventListener("load", function() {
-        applet.inject('ggb-element');
-    });
-</script>
+
 
 
 <p>
@@ -172,11 +166,28 @@ Click <a href ="https://www.geogebra.org/m/fq3vdnmy" style = "color:blue"> here<
 
 
 <script>
-    var foxtrot = {"material_id":"fq3vdnmy", "appName": "3d", "width": 700, "height": 700, "showToolBar": false, "showAlgebraInput": false, "showMenuBar": false, scale:0.8, enableRightClick:false };
-    var applet2 = new GGBApplet(foxtrot, true);
-    window.addEventListener("load", function() {
-        applet2.inject('ggb-foxtrot');
-    });
+function lockZoom(el) {
+  // Blocking mouse wheel from entering Geogebra
+  el.addEventListener('wheel', e => e.stopPropagation(), { capture: true, passive: true });
+
+}
+
+var dodecahedron = {"material_id":"pb4nqczx", "appName":"3d", "width":1400, "height":1400,
+  "showToolBar":false, "showAlgebraInput":false, "showMenuBar":false,
+  "scale":0.4, "enableRightClick":false, "enableShiftDragZoom":true};
+var foxtrot = {"material_id":"fq3vdnmy", "appName":"3d", "width":700, "height":700,
+  "showToolBar":false, "showAlgebraInput":false, "showMenuBar":false,
+  "scale":0.8, "enableRightClick":false, "enableShiftDragZoom":true};
+
+var applet  = new GGBApplet(dodecahedron, true);
+var applet2 = new GGBApplet(foxtrot, true);
+
+window.addEventListener("load", function() {
+  lockZoom(document.getElementById('ggb-element'));
+  lockZoom(document.getElementById('ggb-foxtrot'));
+  applet.inject('ggb-element');
+  applet2.inject('ggb-foxtrot');
+});
 </script>
 
 
